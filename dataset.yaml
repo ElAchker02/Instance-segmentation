@@ -1,0 +1,6 @@
+# dataset.yaml
+train: ./dataset/train/images
+val: ./dataset/valid/images
+
+nc: 2  # number of classes
+names: ['cat','dog']
