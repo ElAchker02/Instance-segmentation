@@ -207,7 +207,6 @@ import glob
 from ultralytics import YOLO
 import requests
 import pandas as pd
-from pytube import YouTube
 import time
 from moviepy.editor import VideoFileClip
 from fpdf import FPDF
@@ -448,7 +447,7 @@ elif option == 'Video':
 
 elif option == 'Webcam':
     if st.sidebar.button('Start Webcam', key="start_webcam_button"):
-        capture_and_predict_webcam("yolov8s-seg.pt", confidence_threshold)
+        capture_and_predict_webcam(selected_model, confidence_threshold)
 
 elif option == 'Images and Videos':
     uploaded_files = st.sidebar.file_uploader("Upload files", type=["jpg", "jpeg", "png", "mp4", "avi", "mov"], accept_multiple_files=True, key="multi_uploader")
